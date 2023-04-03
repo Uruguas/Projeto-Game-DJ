@@ -142,6 +142,8 @@ while True:
             max_seguidores_win = publico_festa_sorteado1 - random.randint(40, publico_festa_sorteado1)
             min_seguidores_win = publico_festa_sorteado1 - random.randint(1, publico_festa_sorteado1)   
             while True:
+                max_seguidores_win = publico_festa_sorteado1 - random.randint(40, publico_festa_sorteado1)
+                min_seguidores_win = publico_festa_sorteado1 - random.randint(1, publico_festa_sorteado1)   
                 entrada_comeco_festa = ['Entrada Propia', 'Entrada convencional', 'Começar diretamente com uma musica']
                 
                 for i, escolha_entrada1 in enumerate(entrada_comeco_festa, start=1 ):
@@ -181,110 +183,31 @@ while True:
                 musicas_festa_megafunk_outros = ['Mega Funk Roça na Loirinha', 'Mega Funk Atras do Caminhão', 'Mega Funk do Akon', 'Mega Funk Desande', 'Mega Funk Perfil Verificado', 'Mega Funk Hitmado', 'Finalizar Show']
                 for i, escolha_musica_outros in enumerate(musicas_festa_megafunk_outros, start=1):
                     print(f'{i}- {escolha_musica_outros}')
-                
+                            
                 escolha_musica_usuario = int(input('Digite a opção desejada: '))
-                
-                if escolha_musica_usuario == 1:
-                    opcao_publico = ['O Publico adorou a musica', 'O publico não gostou da musica']
-                    opcao_publico_random = random.choice(opcao_publico)
-                    
-                    if 'adorou' in opcao_publico_random:
-                        seguidores = seguidores + seguidores_ganhos
-                        valor_cache = valor_cache + 20
-                        print(f'Teu cache aumentou para {valor_cache}')
-                        print(f'Você ganhou {seguidores_ganhos} seguidores')
-                        continue
-                    if 'não' in opcao_publico_random:
-                        seguidores = seguidores - seguidores_ganhos
-                        valor_cache = valor_cache - 10
-                        print(f'Teu cache diminuiu para {valor_cache}')
-                        print(f'Você perdeu {seguidores_ganhos} seguidores')
-                        continue
-                    
-                if escolha_musica_usuario == 2:
-                    opcao_publico = ['O Publico adorou a musica', 'O publico não gostou da musica']
-                    opcao_publico_random = random.choice(opcao_publico)
-                    
-                    if 'adorou' in opcao_publico_random:
-                        seguidores = seguidores + seguidores_ganhos
-                        valor_cache = valor_cache + 20
-                        print(f'{opcao_publico_random}')
-                        print(f'Teu cache aumentou para {valor_cache}')
-                        print(f'Você ganhou {seguidores_ganhos} seguidores')
-                        continue
-                    if 'não' in opcao_publico_random:
-                        seguidores = seguidores - seguidores_ganhos
-                        valor_cache = valor_cache - 10
-                        print(f'{opcao_publico_random}')
-                        print(f'Teu cache diminuiu para {valor_cache}')
-                        print(f'Você perdeu {seguidores_ganhos} seguidores')
-                        continue
-                    
-                if escolha_musica_usuario == 3:
-                    if 'adorou' in opcao_publico_random:
-                        seguidores = seguidores + seguidores_ganhos
-                        valor_cache = valor_cache + 20
-                        print(f'{opcao_publico_random}')
-                        print(f'Teu cache aumentou para {valor_cache}')
-                        print(f'Você ganhou {seguidores_ganhos} seguidores')
-                        continue
-                    if 'não' in opcao_publico_random:
-                        seguidores = seguidores - seguidores_ganhos
-                        valor_cache = valor_cache - 10
-                        print(f'{opcao_publico_random}')
-                        print(f'Teu cache diminuiu para {valor_cache}')
-                        print(f'Você perdeu {seguidores_ganhos} seguidores')
-                        continue
-                    
-                if escolha_musica_usuario == 4:
-                    if 'adorou' in opcao_publico_random:
-                        seguidores = seguidores + seguidores_ganhos
-                        valor_cache = valor_cache + 20
-                        print(f'{opcao_publico_random}')
-                        print(f'Teu cache aumentou para {valor_cache}')
-                        print(f'Você ganhou {seguidores_ganhos} seguidores')
-                        continue
-                    if 'não' in opcao_publico_random:
-                        seguidores = seguidores - seguidores_ganhos
-                        valor_cache = valor_cache - 10
-                        print(f'{opcao_publico_random}')
-                        print(f'Teu cache diminuiu para {valor_cache}')
-                        print(f'Você perdeu {seguidores_ganhos} seguidores')
-                        continue
-                    
-                if escolha_musica_usuario == 5:
-                    if 'adorou' in opcao_publico_random:
-                        seguidores = seguidores + seguidores_ganhos
-                        valor_cache = valor_cache + 20
-                        print(f'{opcao_publico_random}')
-                        print(f'Teu cache aumentou para {valor_cache}')
-                        print(f'Você ganhou {seguidores_ganhos} seguidores')
-                        continue
-                    if 'não' in opcao_publico_random:
-                        seguidores = seguidores - seguidores_ganhos
-                        valor_cache = valor_cache - 10
-                        print(f'{opcao_publico_random}')
-                        print(f'Teu cache diminuiu para {valor_cache}')
-                        print(f'Você perdeu {seguidores_ganhos} seguidores')
-                        continue
-                if escolha_musica_usuario == 6:
-                    if 'adorou' in opcao_publico_random:
-                        seguidores = seguidores + seguidores_ganhos
-                        valor_cache = valor_cache + 20
-                        print(f'{opcao_publico_random}')
-                        print(f'Teu cache aumentou para {valor_cache}')
-                        print(f'Você ganhou {seguidores_ganhos} seguidores')
-                        continue
-                    if 'não' in opcao_publico_random:
-                        seguidores = seguidores - seguidores_ganhos
-                        valor_cache = valor_cache - 10
-                        print(f'{opcao_publico_random}')
-                        print(f'Teu cache diminuiu para {valor_cache}')
-                        print(f'Você perdeu {seguidores_ganhos} seguidores')
-                        continue
+                            
                 if escolha_musica_usuario == 7:
-                    print('Voltando')
+                    print("Fim do show!")
                     break
+
+                opcao_publico = ['O Publico adorou a musica', 'O publico não gostou da musica']
+                opcao_publico_random = random.choice(opcao_publico)
+                            
+                if 'adorou' in opcao_publico_random:
+                    seguidores = seguidores + seguidores_ganhos
+                    valor_cache = valor_cache + 20
+                    print(f'{opcao_publico_random}')
+                    print(f'Teu cache aumentou para {valor_cache}')
+                    print(f'Você ganhou {seguidores_ganhos} seguidores')
+                if 'não' in opcao_publico_random:
+                    seguidores = seguidores - seguidores_ganhos
+                    valor_cache = valor_cache - 10
+                    print(f'{opcao_publico_random}')
+                    print(f'Teu cache diminuiu para {valor_cache}')
+                    print(f'Você perdeu {seguidores_ganhos} seguidores')
+
+            print(f"Você ganhou {seguidores} seguidores durante o show!")
+            print(f"Seu cache final é de {valor_cache} reais.")
             break
                 
     if escolha_menu == 2:
